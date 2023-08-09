@@ -1,0 +1,174 @@
+                                            // Class Movie Task //
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<body>
+    <div class="parent"></div>
+    <script>
+        class Movie{
+            constructor(title, studio, rating = "PG"){
+                this.title = title;
+                this.studio = studio;
+                if(rating === ""){
+                    this.rating = "PG";
+                }else{
+                    this.rating = rating;
+                }
+            }
+            getPG(data = []){
+                return data.filter((e) => e.rating === "PG");
+            }
+        }
+        var film = [
+                      new Movie("Casino Royale", "Eon Produnctions", "PG13"),
+                      new Movie("Vikram", "Rajkamal Produnctions", "PG"),
+                      new Movie("Ponniyin Selvan2", "Lyca Productions", ""),
+                      new Movie("Baahubali2", "Arka Media Works", "R"),
+                      new Movie("3idiots", "Vinod Chopra Films", "PG13")
+                    ];
+        let movieList = new Movie();
+        console.log(movieList.getPG(film));
+    </script>
+</body>
+</html>
+
+
+
+                                 // Class Person details Task //
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<body>
+    <div class="parent"></div>
+    <script>
+        class Person {
+            constructor(name, age, id, role) {
+                this.name = name;
+                this.age = age;
+                this.id = id;
+                this.role = role;
+            }
+            getname(){
+                return this.name;
+            }
+            getage(){
+                return this.age;
+            }
+            getid(){
+                return this.id;
+            }
+            getrole(){
+                return this.role;
+            }
+        }
+        let person1 = new Person("Logeshnarayanan",32,"2k7ca114","FSD");
+        console.log(`name:${person1.getname()}, age:${person1.getage()}, ID:${person1.getid()}, Role:${person1.getrole()}`);
+    </script>
+</body>
+</html>
+
+
+                                   // Calculate Uber Price //
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+<body>
+    <div class="parent"></div>
+    <script>
+        class Uberprice{
+            constructor(kilometerTraveled = 0, priceperKilometer = 0){
+                this.kilometerTraveled = kilometerTraveled;
+                this.priceperKilometer = priceperKilometer;
+            }
+            calculatePrice(){
+                return this.kilometerTraveled * this.priceperKilometer;
+            }
+        }
+        const findPrice = new Uberprice(82,15);
+        console.log(`The travelling cost is: ${findPrice.calculatePrice()}`);
+    </script>
+</body>
+</html>
+
+
+                                                         // Circle Task //
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <script>
+      class Circle {
+        constructor(radius = 1, color = "red") {
+          this.radius = radius;
+          this.color = color;
+        }
+        getradius() {
+          return this.radius;
+        }
+        setradius(newradius) {
+          this.radius = newradius;
+        }
+        getcolor() {
+          return this.color;
+        }
+        setcolor(newcolor) {
+          this.color = newcolor;
+        }
+        getcircumference() {
+          return 2 * Math.PI * this.radius;
+        }
+        getarea() {
+          return Math.PI * this.radius * this.radius;
+        }
+      }
+      let circlepoint = new Circle();
+      console.log(`Radius : ${circlepoint.getradius()}`);
+      console.log(`Color : ${circlepoint.getcolor()}`);
+      console.log(`Circumference : ${circlepoint.getcircumference()}`);
+      console.log(`Area : ${circlepoint.getarea()}`);
+
+      circlepoint.setcolor("green");
+      circlepoint.setradius(5);
+
+      console.log(`new Radius : ${circlepoint.getradius()}`);
+      console.log(`new Color : ${circlepoint.getcolor()}`);
+      console.log(`new Circumference : ${circlepoint.getcircumference()}`);
+      console.log(`new Area : ${circlepoint.getarea()}`);
+    </script>
+  </body>
+</html>
+
+
+                                         
